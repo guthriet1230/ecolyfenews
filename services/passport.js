@@ -23,7 +23,8 @@ passport.deserializeUser((userId, done) => {
 passport.use(new GoogleStrategy({
     clientID: keys.googleClientID,
     clientSecret: keys.googleClientSecret,
-    callbackURL: '/auth/google/callback'
+    callbackURL: '/auth/google/callback',
+    proxy: true
 },
     (accessToken, refreshToken, profile, done) => {
         //mongoose method .findOne({}) helps find an item in a collection this query returns a promise as this is asynchronous 

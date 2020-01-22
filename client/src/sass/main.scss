@@ -25,12 +25,19 @@ $secondary-color: #8564FA;
  
 // 5. Components
 @import
-  'components/_buttons';
+  'components/_buttons',
+  'components/_pageHeader';
 
 
 // 6. Page-specific styles
 @import
   'pages/_landing',
+  'pages/_about',
+  'pages/_branches',
+  'pages/_featured',
+  'pages/_login',
+  'pages/_signup',
+  'pages/_profile',
   'pages/_404';
 
 // // 7. Themes

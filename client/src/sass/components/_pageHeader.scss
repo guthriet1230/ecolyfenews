@@ -1,0 +1,19 @@
+#page-header{
+    width:90%;
+    height:100px;
+    background-color: $primary-color;
+    padding-left: 5%;
+    padding-right: 5%;
+    color:white;
+    display:flex;
+    flex:1;
+    flex-direction:row;
+    align-items: center;
+    // justify-content: center;
+
+    .page-icon{
+        height:50px;
+        width:50px;
+        margin-right:25px;
+    }
+}

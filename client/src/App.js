@@ -8,8 +8,14 @@ import './assets/fonts/Gilroy-ExtraBold.otf'
 
 import Navigation from './components/Layout/Navigation'
 import LandingPage from './pages/Landing';
+
+import FeaturedPage from './pages/Featured';
+import BranchesPage from './pages/Branches';
+import AboutPage from './pages/About';
+
 import ProfilePage from './pages/Profile';
 import LoginPage from './pages/Login';
+import SignupPage from './pages/SignupPage'
 
 class App extends Component {
 
@@ -22,8 +28,14 @@ class App extends Component {
       <div>
         <Navigation />
         <Route exact path="/" component={LandingPage} />
+
+        <Route path="/featured" component={FeaturedPage} />
+        <Route path="/branches" component={BranchesPage} />
+        <Route path="/about" component={AboutPage} />
+
         <Route path="/profile" component={ProfilePage} />
         <Route path="/login" component={LoginPage} />
+        <Route path="/signup" component={SignupPage} />
       </div>
     );
   }

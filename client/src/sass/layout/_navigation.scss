@@ -1,0 +1,36 @@
+#nav{
+    background-color: $primary-color;
+    height:60px;
+    width:90%;
+    position:fixed;
+    display:flex;
+    flex:1;
+    flex-direction:row;
+    color:white;
+    justify-content: space-between;
+    align-items: center;
+    padding:5px 5%;
+/* offset-x | offset-y | blur-radius | color */
+box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 4px 0px;;
+    h1{
+        margin-left:15px;
+        font-size:25px;
+    }
+img#navigation-logo{
+    height:45px;
+    width:45px;
+    margin:auto 0;
+}
+
+#nav-content{
+    display:flex;
+    justify-content:space-between;
+}
+
+
+.nav-column{
+    display:flex;
+    flex:1;
+    flex-direction:row;
+}
+}

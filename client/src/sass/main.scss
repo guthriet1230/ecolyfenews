@@ -1,0 +1,38 @@
+$primary-color:#4bbc92;
+$secondary-color: #8564FA;
+
+
+// // 1. Configuration and helpers
+// @import
+//   'abstracts/variables',
+//   'abstracts/functions',
+//   'abstracts/mixins';
+
+// 2. Vendors
+@import
+  'vendors/_normalize';
+
+// 3. Base stuff
+@import
+  'base/_base',
+  'base/_typography';
+//   'base/helpers';
+
+// 4. Layout-related sections
+@import
+  'layout/_navigation';
+ 
+ 
+// 5. Components
+@import
+  'components/_buttons';
+
+
+// 6. Page-specific styles
+@import
+  'pages/_landing',
+  'pages/_404';
+
+// // 7. Themes
+// @import
+//   'themes/default';

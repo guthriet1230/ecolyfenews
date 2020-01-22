@@ -26,23 +26,39 @@ passport.use(new GoogleStrategy({
     callbackURL: '/auth/google/callback',
     proxy: true
 },
-    (accessToken, refreshToken, profile, done) => {
-        //mongoose method .findOne({}) helps find an item in a collection this query returns a promise as this is asynchronous 
-        //this says find the UserID that with the first record of profile.id
-        User.findOne({ googleId: profile.id })
-            .then(existingUser => {
-                if (existingUser) {
-                    //we already have a record with the given profileid
+    // async (accessToken, refreshToken, profile, done) => {
+    //     //mongoose method .findOne({}) helps find an item in a collection this query returns a promise as this is asynchronous 
+    //     //this says find the UserID that with the first record of profile.id
+    //     const existingUser = await User.findOne({ googleId: profile.id })
+    //         .then(existingUser => {
+    //             if (existingUser) {
+    //                 //we already have a record with the given profileid
 
-                    // done is a passport function that says we're done with passport. The first argument is for err's, but we're in an if statement where we did recieve a user, so this is null. The second argument is the user record or payload
-                    done(null, existingUser)
-                } else {
-                    // we dont have a user record with this id, so make a new record
-                    // this creates a new model instance and saves it to the database. Saving a record to MongoDB is an asynchronous action
-                    new User({ googleId: profile.id }).save()
-                        //this then says we're done and provides the new user. this 'user' is cleaner than the profile.id above
-                        .then(user => done(null, user))
-                }
-            })
+    //                 // done is a passport function that says we're done with passport. The first argument is for err's, but we're in an if statement where we did recieve a user, so this is null. The second argument is the user record or payload
+    //                 return done(null, existingUser)
+    //             } else {
+    //                 // we dont have a user record with this id, so make a new record
+    //                 // this creates a new model instance and saves it to the database. Saving a record to MongoDB is an asynchronous action
+    //                 const user = await new User({ googleId: profile.id }).save()
+    //                 //this then says we're done and provides the new user. this 'user' is cleaner than the profile.id above
+    //                 done(null, user)
+    //             }
+    //         })
 
-    }));
+    // }
+    async (accessToken, refreshToken, profile, done) => {
+        try {
+            //mongoose method .findOne({}) helps find an item in a collection this query returns a promise as this is asynchronous 
+            //     //this says find the UserID that with the first record of profile.id
+            let user = await User.findOne({ googleId: profile.id });
+            // we dont have a user record with this id, so make a new record
+            // this creates a new model instance and saves it to the database. Saving a record to MongoDB is an asynchronous action
+            if (!user) user = await new User({ googleId: profile.id }).save();
+            // done is a passport function that says we're done with passport. The first argument is for err's, but we're in an if statement where we did recieve a user, so this is null. The second argument is the user record or payload
+            done(null, user);
+        } catch (err) {
+            console.log(err);
+        }
+    }
+
+));

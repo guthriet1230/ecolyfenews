@@ -1,0 +1,30 @@
+
+.landing-subhead{
+    // background-color: $secondary-color;
+    // border-radius:50px;
+    height:80px;
+    width:100%;
+    display:flex;
+    flex:1;
+    flex-direction:row;
+    align-items: center;
+    // padding-left:12.5px;
+  
+.hr{
+    height:1px;
+    width:100%;
+    background-color:black;
+    border-bottom: 2.5px;
+    border-bottom-width: 100%;
+    border-bottom-color: black;
+}
+.landing-subhead-image{
+    height:40px;
+    width: 40px;
+}
+h1{
+    color:$primary-color;
+    font-size:40px;
+    padding-left:12.5px;
+}
+}

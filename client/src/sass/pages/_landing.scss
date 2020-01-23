@@ -1,7 +1,13 @@
 #landing-page{
-padding-top:100px;
+    padding-top:100px;
 
+    #landing-article-column{
+        display:flex;
+        // flex-direction:row;
+        flex-wrap:wrap;
+    }
 
+    #landing-tip-column{
 
-
+    }
 }

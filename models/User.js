@@ -3,7 +3,8 @@ const mongoose = require('mongoose')
 const { Schema } = mongoose;
 
 const userSchema = new Schema({
-    googleId: String
+    googleId: String,
+    googleImage: String
 })
 
 //create a new mongoose model that creates a collection called 'users', payload: userSchema

@@ -7,7 +7,7 @@ class FeaturedPage extends Component {
         return (
             <Container id="featured-page">
                 <PageHeader>
-                    <img src={require('../assets/icons/featured_white.png')} className='page-icon' />
+                    <img src={require('../assets/icons/featured_white.png')} className='page-icon' alt='featured icon' />
                     <h1>Featured</h1>
                 </PageHeader>
             </Container>

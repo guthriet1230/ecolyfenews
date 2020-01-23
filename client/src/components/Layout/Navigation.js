@@ -27,7 +27,7 @@ class Navigation extends Component {
                         // to {this.props.auth ? '/profile' : '/'}
                         to='/'
                         style={{ textDecoration: 'none', color: 'white' }}>
-                        <img src={require('../../assets/logos/Logo_Nav.png')} id='navigation-logo' alt='EcoLyfe Logo' />
+                        <img src={require('../../assets/logos/logo_nav.png')} id='navigation-logo' alt='EcoLyfe Logo' />
                         <h1>EcoLyfe News</h1>
                     </Link>
                 </div>

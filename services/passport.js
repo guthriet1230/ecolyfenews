@@ -49,11 +49,20 @@ passport.use(new GoogleStrategy({
     async (accessToken, refreshToken, profile, done) => {
         try {
             //mongoose method .findOne({}) helps find an item in a collection this query returns a promise as this is asynchronous 
+            console.log('profile')
+            console.log(profile._json.picture)
+
             //     //this says find the UserID that with the first record of profile.id
-            let user = await User.findOne({ googleId: profile.id });
+            let user = await User.findOne({
+                googleId: profile.id,
+                googleImage: profile._json.picture
+            });
             // we dont have a user record with this id, so make a new record
             // this creates a new model instance and saves it to the database. Saving a record to MongoDB is an asynchronous action
-            if (!user) user = await new User({ googleId: profile.id }).save();
+            if (!user) user = await new User({
+                googleId: profile.id,
+                googleImage: profile._json.picture
+            }).save();
             // done is a passport function that says we're done with passport. The first argument is for err's, but we're in an if statement where we did recieve a user, so this is null. The second argument is the user record or payload
             done(null, user);
         } catch (err) {

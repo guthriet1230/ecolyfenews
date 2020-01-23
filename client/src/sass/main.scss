@@ -10,6 +10,7 @@ $secondary-color: #8564FA;
 
 // 2. Vendors
 @import
+'vendors/_bootstrap',
   'vendors/_normalize';
 
 // 3. Base stuff
@@ -20,13 +21,16 @@ $secondary-color: #8564FA;
 
 // 4. Layout-related sections
 @import
-  'layout/_navigation';
+  'layout/_navigation',
+  'layout/_pageHeader',
+  'layout/landingHeader';
  
  
 // 5. Components
 @import
   'components/_buttons',
-  'components/_pageHeader';
+  'components/_card',
+  'components/_tip';
 
 
 // 6. Page-specific styles

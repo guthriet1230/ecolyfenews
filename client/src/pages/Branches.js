@@ -7,7 +7,7 @@ class BranchesPage extends Component {
         return (
             <Container id="branches-page">
                 <PageHeader>
-                    <img src={require('../assets/icons/branches_white.png')} className='page-icon' />
+                    <img src={require('../assets/icons/branches_white.png')} className='page-icon' alt='branches icon' />
                     <h1>Branches</h1>
                 </PageHeader>
             </Container>

@@ -1,6 +1,8 @@
 const passport = require('passport');
 
 module.exports = (app) => {
+
+    //get the profile and email from the google account
     app.get(
         '/auth/google',
         passport.authenticate('google', {
@@ -8,7 +10,7 @@ module.exports = (app) => {
         })
     )
 
-    //after we're done with the passport google authenticate call...
+    //after we're done with the passport google authenticate call, send to the homepage
     app.get(
         '/auth/google/callback',
         passport.authenticate('google'),

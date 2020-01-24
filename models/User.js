@@ -4,7 +4,9 @@ const { Schema } = mongoose;
 
 const userSchema = new Schema({
     googleId: String,
-    googleImage: String
+    googleImage: String,
+    firstName: String,
+    lastName: String,
 })
 
 //create a new mongoose model that creates a collection called 'users', payload: userSchema

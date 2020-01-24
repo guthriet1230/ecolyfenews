@@ -1,10 +1,14 @@
 #landing-page{
-    padding-top:100px;
+    // padding-top:100px;
 
     #landing-article-column{
         display:flex;
         // flex-direction:row;
-        flex-wrap:wrap;
+        // flex-wrap:wrap;
+    }
+    #landing-header{
+        display:flex;
+        justify-content: space-between;
     }
 
     #landing-tip-column{

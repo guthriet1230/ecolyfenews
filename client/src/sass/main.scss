@@ -1,6 +1,6 @@
 $primary-color:#4bbc92;
-$secondary-color: #8564FA;
-
+$secondary-color: #3E3E3E;
+$third-color: #8564FA;
 
 // // 1. Configuration and helpers
 // @import
@@ -23,13 +23,15 @@ $secondary-color: #8564FA;
 @import
   'layout/_navigation',
   'layout/_pageHeader',
-  'layout/landingHeader';
+  'layout/_landingHeader',
+  'layout/_dropdown.scss';
  
  
 // 5. Components
 @import
   'components/_buttons',
   'components/_card',
+  'components/_dropDownArrow',
   'components/_tip';
 
 

@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
-import Container from '../components/UI/Container'
+import Wrapper from '../components/UI/Wrapper';
 
 class AboutPage extends Component {
     render() {
         return (
-            <Container id="about-page">
+            <Wrapper id="about-page">
                 <section id='about-header'>
                     <h1>About Page</h1>
                 </section>
 
-            </Container>
+            </Wrapper>
         );
     }
 }

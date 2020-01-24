@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
 import PageHeader from '../components/UI/PageHeader';
-import Container from '../components/UI/Container';
+import Wrapper from '../components/UI/Wrapper';
 
 class FeaturedPage extends Component {
     render() {
         return (
-            <Container id="featured-page">
-                <PageHeader>
-                    <img src={require('../assets/icons/featured_white.png')} className='page-icon' alt='featured icon' />
-                    <h1>Featured</h1>
-                </PageHeader>
-            </Container>
+            <Wrapper id="featured-page">
+                <div id='featured-main'>
+
+                </div>
+                <div id='featured-lower'>
+
+                </div>
+            </Wrapper>
         );
     }
 }

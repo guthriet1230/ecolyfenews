@@ -4,11 +4,11 @@ h1,h2,h3,h4,h5,h6{
 
 .no-text-style{
     text-decoration: none;
-    color:black
+    color:$secondary-color;
     }
     
 p{
     font-family: 'Poppins', sans-serif;
     font-weight:'Extra-Light';
-    color:black;
+    color:$secondary-color;
 }

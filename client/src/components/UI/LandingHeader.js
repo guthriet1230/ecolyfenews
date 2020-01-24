@@ -1,22 +1,24 @@
 import React from 'react';
-import { Row, Col } from 'react-bootstrap'
+import { Row, Col } from 'react-bootstrap';
+import DropDownArrow from '../UI/DropDownArrow';
+import DropDownCategory from '../Layout/DropDownCategory'
+import moment from 'moment'
 
 function LandingHeader(props) {
     return (
-        <Row>
-            <Col md={8}>
-                <div className='landing-subhead'>
-                    <img src={props.icon} className='landing-subhead-image' alt='today icon' />
-                    <h1>{props.title}</h1>
-                </div>
-                <div className='hr' />
+        <Row id='landing-header'>
+            <Col md={8} className='landing-subhead'>
+
+                <img src={props.icon} className='landing-subhead-image' alt='today icon' />
+                <h1>{moment().format('MMM Do, YYYY')}</h1>
+
+                {/* <div className='hr' /> */}
             </Col>
-            <Col md={4}>
-                <div className='landing-subhead'>
-                    <img src={require('../../assets/icons/leaflet_nobackground.png')} alt='leaflet icon' className='landing-subhead-image' />
-                    <h1>Tips</h1>
-                </div>
-                <div className='hr' />
+            <Col md={4} className='landing-subhead' id='right'>
+                <DropDownCategory>
+                    {/* <h1>Branches</h1>
+                    <DropDownArrow /> */}
+                </DropDownCategory>
             </Col>
         </Row>
     )

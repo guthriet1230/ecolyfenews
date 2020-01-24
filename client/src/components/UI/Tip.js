@@ -5,7 +5,7 @@ function TipCard(props) {
         <>
             <div id='tip-card'>
                 <div className='tip-card-half'>
-                    <img id='tip-card-image' src={props.image} />
+                    <img id='tip-card-image' src={props.image} alt='Tip Pic' />
                 </div>
                 <div id='tip-gutter-green' />
                 <div className='tip-card-half'>

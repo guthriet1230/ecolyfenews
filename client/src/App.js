@@ -10,7 +10,7 @@ import Navigation from './components/Layout/Navigation'
 import LandingPage from './pages/Landing';
 
 import FeaturedPage from './pages/Featured';
-import BranchesPage from './pages/Branches';
+import TipsPage from './pages/Tips';
 import AboutPage from './pages/About';
 
 import ProfilePage from './pages/Profile';
@@ -30,7 +30,7 @@ class App extends Component {
         <Route exact path="/" component={LandingPage} />
 
         <Route path="/featured" component={FeaturedPage} />
-        <Route path="/branches" component={BranchesPage} />
+        <Route path="/tips" component={TipsPage} />
         <Route path="/about" component={AboutPage} />
 
         <Route path="/profile" component={ProfilePage} />

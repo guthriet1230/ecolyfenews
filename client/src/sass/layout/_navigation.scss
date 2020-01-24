@@ -11,7 +11,7 @@
     color:white;
     justify-content: space-between;
     align-items: center;
-    padding:5px 5%;
+    padding:0 5%;
     /* offset-x | offset-y | blur-radius | color */
     box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 4px 0px;
     
@@ -32,9 +32,13 @@
         display:flex;
         flex-direction:row;
         align-items: center;
+        justify-content:center;
         font-family:'Gilroy-ExtraBold';
         font-size:16px;
         color:$primary-color;
+        height:100%;
+        width:100%;
+     
     }
 
     p:hover{
@@ -46,6 +50,7 @@
         display:flex;
         justify-content:space-between;
         padding-left:15%;
+        height:100%;
     }
 
     .nav-column{
@@ -53,5 +58,33 @@
         flex:1;
         flex-direction:row;
         align-items: center;
+        height:100%;
+        justify-content:flex-start;
+        // background-color:blue
+        // padding:18;
+    }
+div#nav-brand.nav-column a{
+    justify-content: flex-start;
+}
+
+
+
+
+    .nav-featured:hover{
+        background-color:$primary-color;
+        color:white;
+    }
+    .nav-tips:hover{
+        background-color:$primary-color;
+        color:white;
+    }
+    .nav-about:hover{
+        background-color:$primary-color;
+        color:white;
+    }
+
+    .nav-user:hover{
+        background-color:$primary-color;
+        color:white;
     }
 }

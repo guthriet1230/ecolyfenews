@@ -6,34 +6,38 @@ const Article = mongoose.model('newArticle')
 const requireLogin = require('../middlewares/requireLogin');
 
 module.exports = (app) => {
-    // app.get('/api/new-article', (req, res) => {
-    //     console.log(req)
-    //     res.json(req.user)
-    //     res.redirect('/')
-    //     res.end();
-    // })
+    app.get('/api/new-article', (req, res) => {
+        console.log(req)
+        // res.json(req.user)
+        res.send(req)
+        res.redirect('/')
+        // res.end();
+    })
 
     // use the require middleware to make sure that they're logged in. if they aren't logged in. The requireLogin middleware will fire 'you must log in'
     // you can add as many functions as you want until a res.end or res.send is hit 
     app.post('/api/new-article',
         requireLogin,
         (req, res) => {
-
+            // debugger
+            console.log(req.body.header)
             // const { header, subheader, body, category, likes } = req.body
             const article = new Article({
                 header: req.body.header,
-                // subheader: req.body.subheader,
-                // body: req.body.body,
+                subheader: req.body.subheader,
+                body: req.body.body,
                 // category: req.body.category,
                 // date: Date.now(),
                 // likes: req.body.category,
                 // _user: req.user.id
-            }).save().then(result => {
+            })
+            article.save().then(result => {
                 console.log(result)
                 console.log('article saved')
             }).catch(err => {
                 console.log(err)
             })
+            res.redirect('/profile')
         })
 
     // app.post("/articles/:id", function (req, res) {

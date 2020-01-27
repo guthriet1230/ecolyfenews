@@ -21,21 +21,34 @@ class NewArticlePage extends Component {
         });
     };
 
-    handleFormSubmit = event => {
+    handleFormSubmit = () => {
         // event.preventDefault();
 
         let article = {
             header: this.state.header,
-            // subheader: this.state.subheader,
-            // body: this.state.body,
+            subheader: this.state.subheader,
+            body: this.state.body,
             // category: this.state.category,
             // likes: 0
         };
-        axios.post("/api/new-article", article).then(res => {
-            console.log("completed update")
-            console.log(res)
-            // this.setState({ redirect: true })
+        console.log(article)
+        axios.post('/api/new-article', {
+            article
         })
+            .then(function (response) {
+                console.log(response);
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+
+
+
+        // axios.post("/api/new-article", article).then(res => {
+        //     console.log("completed update")
+        //     console.log(res)
+        //     // this.setState({ redirect: true })
+        // })
     }
 
     render() {

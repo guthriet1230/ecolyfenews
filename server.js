@@ -3,6 +3,8 @@ const mongoose = require('mongoose')
 const cookieSession = require('cookie-session')
 const passport = require('passport')
 const keys = require('./config/keys')
+const bodyParser = require("body-parser");
+
 
 // import the model before you rerquire the passort. we use models in passport
 require('./models/User')
@@ -17,6 +19,8 @@ mongoose.connect(keys.mongoURI)
 
 // call express to create an applciation that will handle our HTTP requests (ie: GET, USE, POST, UPDATE)
 const app = express();
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 // tell express that it needs to make use insid eour application
 app.use(cookieSession({

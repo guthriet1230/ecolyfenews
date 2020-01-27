@@ -4,8 +4,8 @@ const { Schema } = mongoose;
 
 const newArticleSchema = new Schema({
     header: { type: String, required: true },
-    // subheader: { type: String, required: true },
-    // body: { type: String, required: true },
+    subheader: { type: String, required: true },
+    body: { type: String, required: true },
     // category: {
     //     type: String,
     //     // required: true 
@@ -19,4 +19,4 @@ const newArticleSchema = new Schema({
 
 //create a new mongoose model that creates a collection called 'users', payload: userSchema
 // sidenote: one argument means pulling from mongoDB and two arguments means setting an argument (userSchema) to the database 
-module.exports = mongoose.model('newArticle', newArticleSchema) 
+mongoose.model('newArticle', newArticleSchema) 

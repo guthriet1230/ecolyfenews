@@ -1,0 +1,19 @@
+#new-article-page{
+
+
+    #new-article-form{
+        display:flex;
+        flex-direction:column;
+        flex:1;
+    }
+
+    input.new-article-input{
+        width:100%;
+        background-color: pink;
+    }
+
+    .new-article-textarea{
+  width:100%;
+        background-color: blue;
+    }
+}

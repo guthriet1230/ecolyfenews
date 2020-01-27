@@ -3,9 +3,53 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import Button from '../UI/Button'
 import DropDown from './DropDown'
-import { Container } from 'react-bootstrap'
+// import { Container } from 'react-bootstrap'
 
 class Navigation extends Component {
+    state = {
+        profileImage: ''
+    }
+    // renderContent() {
+    //     // debugger
+
+    //     if (this.props.auth.data) {
+    //         return <Button href='/auth/google'>Login</Button>
+    //     } else if (this.props.auth.data.googleImage) {
+    //         return <DropDown profileImage={this.props.auth.data.googleImage} />
+    //     } return <Button href='/auth/google'>Login</Button>
+    // }
+
+    // renderContent = () => async () => {
+    //     await this.props.auth.data
+    //     if (this.props.auth.data.googleImage) {
+    //         return <DropDown profileImage={this.props.auth.data.googleImage} />
+
+    //         //         return <Button href='/auth/google'>Login</Button>
+    //         //     } else if (this.props.auth.data.googleImage) {
+    //         //         return <DropDown profileImage={this.props.auth.data.googleImage} />
+    //         //     }
+    //         // dispatch({ type: FETCH_USER, payload: res })
+    //     } return <Button href='/auth/google'>Login</Button>
+    // }
+
+    // renderContent() {
+    //     switch (this.props.auth.data) {
+    //         case null:
+    //             return;
+    //         case false || "" || {}:
+    //             return
+    //         case (typeof (this.props.auth.data) === 'string'):
+    //             return <DropDown />
+    //         default:
+    //             return (
+    //                 <Button href='/auth/google'>Login</Button>
+    //             );
+    //     }
+    // }
+
+
+
+
 
     renderContent() {
         switch (this.props.auth.data) {
@@ -17,18 +61,16 @@ class Navigation extends Component {
                 );
             default:
                 // return <img src={this.props.auth.data.googleImage} alt='Profile Image' />
-
-
                 // return <p><a href='/api/logout' className='no-text-style'>Logout</a></p>
                 return <DropDown></DropDown>
-
-
-
         }
     }
 
+
+
     render() {
         console.log(this.props.auth)
+        // debugger
         return (
             <nav id="nav">
                 <div className='nav-column' id='nav-brand'>

@@ -16,6 +16,7 @@ import AboutPage from './pages/About';
 import ProfilePage from './pages/Profile';
 import LoginPage from './pages/Login';
 import SignupPage from './pages/SignupPage'
+import NewArticlePage from './pages/NewArticle'
 
 class App extends Component {
 
@@ -32,7 +33,7 @@ class App extends Component {
         <Route path="/featured" component={FeaturedPage} />
         <Route path="/tips" component={TipsPage} />
         <Route path="/about" component={AboutPage} />
-
+        <Route path="/new-article" component={NewArticlePage} />
         <Route path="/profile" component={ProfilePage} />
         <Route path="/login" component={LoginPage} />
         <Route path="/signup" component={SignupPage} />

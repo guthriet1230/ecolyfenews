@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PageHeader from '../components/UI/PageHeader';
+// import PageHeader from '../components/UI/PageHeader';
 import Wrapper from '../components/UI/Wrapper';
 
 class FeaturedPage extends Component {

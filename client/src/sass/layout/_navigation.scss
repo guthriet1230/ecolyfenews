@@ -15,6 +15,15 @@
     /* offset-x | offset-y | blur-radius | color */
     box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 4px 0px;
     
+#profile-image{
+    height:40px;
+    width:40px;
+    border-radius:50px;
+    border: solid $primary-color 2px;
+}
+
+
+
     h1{
         margin-left:15px;
         font-size:25px;

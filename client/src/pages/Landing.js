@@ -3,13 +3,13 @@ import SubHeader from '../components/UI/LandingHeader';
 import { Container, Row, Col } from 'react-bootstrap';
 import Wrapper from '../components/UI/Wrapper';
 import Card from '../components/UI/Card';
-import TipCard from '../components/UI/Tip';
+// import TipCard from '../components/UI/Tip';
 
 class LandingPage extends Component {
     render() {
         return (
             <Wrapper id="landing-page">
-                <Container nogutter>
+                <Container>
                     <SubHeader
                         title="Today's Articles"
                         icon={require('../assets/icons/calendar_nobackground.png')}

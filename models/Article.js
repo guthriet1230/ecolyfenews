@@ -3,17 +3,20 @@ const mongoose = require('mongoose')
 const { Schema } = mongoose;
 
 const newArticleSchema = new Schema({
-    header: String,
-    subheader: String,
-    body: String,
-    category: String,
-    date: Date,
-    likes: { type: Number, default: 0 },
-    // by convention, underscore means this is connecting to another schema
-    // helps define the relatsionship between an article and a
-    _user: { type: Schema.Types.ObjectId, ref: 'User' }
+    header: { type: String, required: true },
+    // subheader: { type: String, required: true },
+    // body: { type: String, required: true },
+    // category: {
+    //     type: String,
+    //     // required: true 
+    // },
+    // date: Date,
+    // likes: { type: Number, default: 0 },
+    // // by convention, underscore means this is connecting to another schema
+    // // helps define the relatsionship between an article and a
+    // _user: { type: Schema.Types.ObjectId, ref: 'User' }
 })
 
 //create a new mongoose model that creates a collection called 'users', payload: userSchema
-// sidenote: one argument means pulling from mongoDB and two arguments means setting and argument (userSchema) to the database 
-mongoose.model('newArticle', newArticleSchema) 
+// sidenote: one argument means pulling from mongoDB and two arguments means setting an argument (userSchema) to the database 
+module.exports = mongoose.model('newArticle', newArticleSchema) 
